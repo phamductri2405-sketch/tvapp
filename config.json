@@ -1,4 +1,11 @@
-{
+ {
+  "allowed_ips": [
+    "113.161.1.2"
+  ],
+  "allowed_devices": [
+    "MÃ_THIẾT_BỊ_CỦA_BẠN"
+  ],
+  "telegram_contact": "https://t.me/link_telegram_của_bạn",
   "sources": [
     {
       "id": "tieulam",
