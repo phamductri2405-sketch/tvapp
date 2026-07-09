@@ -2,6 +2,7 @@ const fs = require('fs');
 const https = require('https');
 
 function testEndpoint(url) {
+    if (!url) return Promise.resolve(false);
     return new Promise((resolve) => {
         const req = https.get(url, {
             headers: {
@@ -15,7 +16,6 @@ function testEndpoint(url) {
                 res.on('end', () => {
                     try {
                         const parsed = JSON.parse(data);
-                        // Check if it has expected data structure (not empty/error)
                         resolve(true);
                     } catch (e) {
                         resolve(false);
@@ -51,7 +51,7 @@ async function run() {
         }
     }
 
-    // Candidates for Xoilac
+    // Candidates for Xoilac / Socolive
     const xoilacCandidates = [
         "https://api.gvapi.cc/api/matches",
         "https://api.colatv.live/api/matches",
@@ -69,6 +69,7 @@ async function run() {
 
     // Candidates for Colalive
     const colaliveCandidates = [
+        "https://api.cltvlv.com/api/matches",
         "https://d2av5eups05yh3.cloudfront.net/api/c5/business/livehouse/index",
         "https://d3j9d91vxmbmsx.cloudfront.net/api/c5/business/livehouse/index"
     ];
@@ -100,18 +101,44 @@ async function run() {
         }
     }
 
-    // Read existing config.json to preserve or merge
-    let config = {
-        tieulam_url: workingTieuLam,
-        xoilac_url: workingXoilac,
-        colalive_url: workingColalive,
-        luongson_url: workingLuongSonList,
-        luongson_detail_base: workingLuongSonDetailBase
-    };
+    // Read existing config.json to preserve structure
+    const configPath = 'config.json';
+    let configData = {};
+    
+    if (fs.existsSync(configPath)) {
+        try {
+            const content = fs.readFileSync(configPath, 'utf8');
+            configData = JSON.parse(content);
+            console.log("Successfully loaded existing config.json structure.");
+        } catch (e) {
+            console.log("Failed to parse existing config.json, initializing empty object.", e);
+        }
+    }
 
-    console.log("Final Generated Config:", JSON.stringify(config, null, 2));
-    fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
-    console.log("config.json written successfully.");
+    // Ensure sources array exists
+    if (!configData.sources) {
+        configData.sources = [];
+    }
+
+    // Update URL fields in the sources list while maintaining the format
+    configData.sources.forEach(src => {
+        if (src.id === 'tieulam') {
+            src.api_url = workingTieuLam;
+        } else if (src.id === 'xoilac') {
+            src.api_url = workingXoilac;
+        } else if (src.id === 'socolive') {
+            src.api_url = workingXoilac; // SocoLive uses same candidates
+        } else if (src.id === 'colalive') {
+            src.api_url = workingColalive;
+        } else if (src.id === 'luongson') {
+            src.api_url = workingLuongSonList;
+            src.luongson_detail_base = workingLuongSonDetailBase;
+        }
+    });
+
+    console.log("Final Generated Config structure:", JSON.stringify(configData, null, 2));
+    fs.writeFileSync(configPath, JSON.stringify(configData, null, 2));
+    console.log("config.json merged and written successfully.");
 }
 
 run();
