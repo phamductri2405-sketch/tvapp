@@ -9,7 +9,7 @@
   "sources": [
     {
       "id": "tieulam",
-      "name": "Tiểu Lâm TV",
+      "name": "Tiếu Lâm TV",
       "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_tieulam.png",
       "api_url": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
       "parser_type": "tieulam",
