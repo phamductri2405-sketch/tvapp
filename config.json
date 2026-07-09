@@ -1,7 +1,41 @@
 {
-  "tieulam_url": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
-  "xoilac_url": "https://api.gvapi.cc/api/matches",
-  "colalive_url": "https://d2av5eups05yh3.cloudfront.net/api/c5/business/livehouse/index",
-  "luongson_url": "https://api-ls.cdnokvip.com/api/get-livestream-group?isHot=false&isLive=false&isToday=false&isTomorrow=false&offset=0",
-  "luongson_detail_base": "https://api-ls.cdnokvip.com/api/match-detail"
+  "sources": [
+    {
+      "id": "tieulam",
+      "name": "Tiểu Lâm TV",
+      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_tieulam.png",
+      "api_url": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
+      "parser_type": "tieulam",
+      "referer": "https://sv1.tieulam4.live/",
+      "origin": "https://sv1.tieulam4.live"
+    },
+    {
+      "id": "xoilac",
+      "name": "Xôi Lạc TV",
+      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_xoilac.png",
+      "api_url": "https://api.gvapi.cc/api/matches",
+      "parser_type": "xoilac",
+      "referer": "https://xoilaclinkwc2026.tv/",
+      "origin": "https://xoilaclinkwc2026.tv"
+    },
+    {
+      "id": "colalive",
+      "name": "Cola Live",
+      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_colalive.png",
+      "api_url": "https://d2av5eups05yh3.cloudfront.net/api/c5/business/livehouse/index",
+      "parser_type": "colalive",
+      "referer": "https://colalive.tv/",
+      "origin": "https://colalive.tv"
+    },
+    {
+      "id": "luongson",
+      "name": "Lương Sơn TV",
+      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_luongson.png",
+      "api_url": "https://api-ls.cdnokvip.com/api/get-livestream-group?isHot=false&isLive=false&isToday=false&isTomorrow=false&offset=0",
+      "parser_type": "luongson",
+      "referer": "",
+      "origin": "",
+      "luongson_detail_base": "https://api-ls.cdnokvip.com/api/match-detail"
+    }
+  ]
 }
