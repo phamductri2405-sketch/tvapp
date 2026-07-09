@@ -37,5 +37,14 @@
       "origin": "",
       "luongson_detail_base": "https://api-ls.cdnokvip.com/api/match-detail"
     }
+        {
+      "id": "colalive",
+      "name": "ColaTv",
+      "logo_url": "https://colatv.live/assets/images/logo.png",
+      "api_url": "https://api.cltvlv.com/api/matches",
+      "parser_type": "colalive",
+      "referer": "https://colatv.live/",
+      "origin": "https://colatv.live"
+    }
   ]
 }
