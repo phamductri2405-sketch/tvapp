@@ -23,7 +23,7 @@
       "name": "SocoLive",
       "logo_url": "https://scientech-inc.com/wp-content/uploads/2025/07/logo-socolive.png",
       "api_url": "https://api.gvapi.cc/api/matches",
-      "parser_type": "colalive",
+      "parser_type": "xoilac",
       "referer": "https://scientech-inc.com/",
       "origin": "https://scientech-inc.com"
     },
