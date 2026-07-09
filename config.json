@@ -1,9 +1,9 @@
  {
   "allowed_ips": [
-    "113.161.1.2" , "118.68.134.16"
+    "113.161.1.2" , "118.68.134.15"
   ],
   "allowed_devices": [
-    "MÃ_THIẾT_BỊ_CỦA_BẠN" , "1f2aeba96faabea1"
+    "MÃ_THIẾT_BỊ_CỦA_BẠN" , "1f2aeba96faabea3"
   ],
   "telegram_contact": "https://t.me/link_telegram_của_bạn",
   "sources": [
