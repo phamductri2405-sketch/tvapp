@@ -42,7 +42,7 @@
       "name": "ColaTv",
       "logo_url": "https://colatv.live/assets/images/logo.png",
       "api_url": "https://api.cltvlv.com/api/matches",
-      "parser_type": "colalive",
+      "parser_type": "xoilac",
       "referer": "https://colatv.live/",
       "origin": "https://colatv.live"
     }
