@@ -19,13 +19,13 @@
       "origin": "https://xoilaclinkwc2026.tv"
     },
     {
-      "id": "colalive",
-      "name": "Cola Live",
-      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_colalive.png",
-      "api_url": "https://d2av5eups05yh3.cloudfront.net/api/c5/business/livehouse/index",
+      "id": "socolive",
+      "name": "SocoLive",
+      "logo_url": "https://scientech-inc.com/wp-content/uploads/2025/07/logo-socolive.png",
+      "api_url": "https://api.gvapi.cc/api/matches",
       "parser_type": "colalive",
-      "referer": "https://colalive.tv/",
-      "origin": "https://colalive.tv"
+      "referer": "https://scientech-inc.com/",
+      "origin": "https://scientech-inc.com"
     },
     {
       "id": "luongson",
