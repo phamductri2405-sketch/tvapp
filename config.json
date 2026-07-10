@@ -30,7 +30,7 @@
       {
       "id": "xaycon",
       "name": "Xây Côn TV",
-      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_tieulam.png",
+      "logo_url": "https://sv2.xaycon7.live/logo-x-primary.png",
       "resolver_url": "https://xaycon4.live/",
       "api_url": "https://sv.xaycontv.xyz/api/v1/external/fixtures/unfinished",
       "parser_type": "tieulam",
