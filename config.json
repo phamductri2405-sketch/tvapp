@@ -40,7 +40,7 @@
       "id": "xoilac",
       "name": "Xôi Lạc TV",
       "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_xoilac.png",
-      "api_url": "https://api.cltvlv.com/api/matches",
+      "api_url": "https://api.gvapi.cc/api/matches",
       "parser_type": "xoilac",
       "referer": "https://colatv.live/",
       "origin": "https://colatv.live"
@@ -50,7 +50,7 @@
       "name": "Hội Quán TV",
       "logo_url": "https://hoiquan6.tv/wp-content/uploads/2025/08/Logo-banner-hoi-quan-tong-hop-khong-nen-1024x305.webp",
       "resolver_url": "https://hoiquan6.tv/",
-      "api_url": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished",
+      "api_url": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
       "parser_type": "tieulam",
       "referer": "https://hoiquan6.tv/",
       "origin": "https://hoiquan6.tv"
@@ -66,7 +66,7 @@
       "origin": "https://xaycon4.live"
     },
     {
-      "id": "thiendinh", 
+      "id": "thiendinh",
       "name": "Thiên Đình TV",
       "logo_url": "https://sv2.thiendinh5.live/logo.png",
       "resolver_url": "https://sv2.thiendinh5.live/",
