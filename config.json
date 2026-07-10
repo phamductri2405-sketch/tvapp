@@ -1,8 +1,8 @@
 {
   "latest_version_code": 7,
-  "latest_version_name": "BETA TEST",
+  "latest_version_name": "1.0.7",
   "update_url": "https://www.dropbox.com/scl/fi/vfhi1r7qf02ey4pqm5kib/GaTV.apk?rlkey=aojc3r8no4s1io08wnytbvpvx&st=gyvcpztr&dl=1",
-  "update_description": "Cập nhật đồng bộ hệ thống API kênh xem trực tiếp từ Hồng TV, tối ưu tốc độ kết nối và vá lỗi BLV!",
+  "update_description": "Cập nhật v1.0.7: Thêm nguồn phát mới Tiếu Lâm TV kết nối qua WebView ẩn (không quảng cáo), tăng kích thước thông báo và tối ưu hóa D-pad điều khiển tivi!",
   "background_url": "https://static.vecteezy.com/system/resources/previews/067/146/937/non_2x/world-cup-2026-background-free-vector.jpg",
   "allowed_ips": [
     "113.161.1.2",
@@ -14,8 +14,8 @@
   ],
   "telegram_contact": "https://t.me/cskh_gatv",
   "announcement_title": "THÔNG BÁO TỪ HỆ THỐNG GÀ TV",
-  "announcement_message": "Chào mừng các bạn đến với Gà TV!",
-  "announcement_version": 1,
+  "announcement_message": "Chào mừng các bạn đến với Gà TV! Phiên bản 1.0.7 đã thêm nguồn phát mới Tiếu Lâm TV hoạt động mượt mà hoàn toàn trên Android TV.",
+  "announcement_version": 2,
   "sources": [
     {
       "id": "tieulam",
@@ -27,13 +27,23 @@
       "referer": "https://hoiquan6.tv/",
       "origin": "https://hoiquan6.tv"
     },
-      {
+    {
       "id": "xaycon",
       "name": "Xây Côn TV",
       "logo_url": "https://sv2.xaycon7.live/logo-x-primary.png",
       "resolver_url": "https://xaycon4.live/",
       "api_url": "https://sv.xaycontv.xyz/api/v1/external/fixtures/unfinished",
       "parser_type": "tieulam",
+      "referer": "https://xaycon4.live/",
+      "origin": "https://xaycon4.live"
+    },
+    {
+      "id": "tieulam_graph",
+      "name": "Tiếu Lâm TV",
+      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_tieulam.png",
+      "resolver_url": "https://xaycon4.live",
+      "api_url": "https://api.tlap17062026.com/matches/graph",
+      "parser_type": "tieulam_graph",
       "referer": "https://xaycon4.live/",
       "origin": "https://xaycon4.live"
     },
@@ -50,7 +60,7 @@
       "id": "luongson",
       "name": "Lương Sơn TV",
       "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_luongson.png",
-      "api_url": "https://api-ls.cdnokvip.com/api/get-livestream-group",
+      "api_url": "https://api-ls.cdnokvip.com/api/get-livestream-group?isHot=false&isLive=false&isToday=false&isTomorrow=false&offset=0",
       "parser_type": "luongson",
       "referer": "",
       "origin": "",
