@@ -40,12 +40,12 @@
     {
       "id": "tieulam_graph",
       "name": "Tiếu Lâm TV",
-      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_tieulam.png",
-      "resolver_url": "https://xaycon4.live",
-      "api_url": "https://api.tlap17062026.com/matches/graph",
+      "logo_url": "https://static.asynccdn.com/images/local/DM9qSV6_2048x682.png",
+      "resolver_url": "https://sv1.tieulamwc2.net/",
+      "api_url": "https://sv1.tieulamwc2.net/trang-chu",
       "parser_type": "tieulam_graph",
-      "referer": "https://xaycon4.live/",
-      "origin": "https://xaycon4.live"
+      "referer": "https://sv1.tieulamwc2.net/trang-chu",
+      "origin": "https://sv1.tieulamwc2.net/trang-chu"
     },
     {
       "id": "xoilac",
