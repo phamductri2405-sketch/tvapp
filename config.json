@@ -38,14 +38,14 @@
       "origin": "https://xaycon4.live"
     },
     {
-      "id": "tieulam_graph",
-      "name": "Tiếu Lâm TV",
-      "logo_url": "https://static.asynccdn.com/images/local/DM9qSV6_2048x682.png",
+      "id": "tieulam",
+      "name": "Thiên Đình TV",
+      "logo_url": "https://sv2.thiendinh5.live/logo.png",
       "resolver_url": "https://sv1.tieulamwc2.net/",
-      "api_url": "https://api.tlap17062026.com/matches/graph",
+      "api_url": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished",
       "parser_type": "tieulam_graph",
-      "referer": "https://sv1.tieulamwc2.net/",
-      "origin": "https://sv1.tieulamwc2.net"
+      "referer": "https://sv2.thiendinh5.live/",
+      "origin": "https://sv2.thiendinh5.live"
     },
     {
       "id": "xoilac",
