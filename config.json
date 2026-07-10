@@ -1,17 +1,18 @@
 {
   "latest_version_code": 6,
-  "latest_version_name": "BETA TEST",
+  "latest_version_name": "1.0.6",
   "update_url": "https://www.dropbox.com/scl/fi/vfhi1r7qf02ey4pqm5kib/GaTV.apk?rlkey=aojc3r8no4s1io08wnytbvpvx&st=gyvcpztr&dl=1",
-  "update_description": "Cập nhật giao diện , tối ưu trải nghiệm người dùng !",
+  "update_description": "Cập nhật giao diện mới cực đẹp, tối ưu hóa tốc độ và tự động vượt chặn nhà mạng!",
   "background_url": "https://static.vecteezy.com/system/resources/previews/067/146/937/non_2x/world-cup-2026-background-free-vector.jpg",
   "allowed_ips": [
     "113.161.1.2",
     "118.68.134.15"
   ],
   "allowed_devices": [
-    "1f2aeba96faabea3" , "83908559b03bd8b1"
+    "1f2aeba96faabea3",
+    "83908559b03bd8b1"
   ],
-  "telegram_contact": "https://t.me/@Chai_Football",
+  "telegram_contact": "https://t.me/cskh_gatv",
   "announcement_title": "THÔNG BÁO TỪ HỆ THỐNG GÀ TV",
   "announcement_message": "Chào mừng các bạn đến với Gà TV!",
   "announcement_version": 1,
@@ -23,8 +24,8 @@
       "resolver_url": "https://bit.ly/tieulamtv",
       "api_url": "https://sv.khandai-a.xyz/api/v1/external/fixtures/unfinished",
       "parser_type": "tieulam",
-      "referer": "https://sv1.tieulamwc2.net/",
-      "origin": "https://sv1.tieulamwc2.net"
+      "referer": "https://sv1.tieulam4.live/",
+      "origin": "https://sv1.tieulam4.live"
     },
     {
       "id": "xoilac",
@@ -65,4 +66,3 @@
     }
   ]
 }
- 
