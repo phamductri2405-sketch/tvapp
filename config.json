@@ -18,6 +18,15 @@
   "announcement_version": 2,
   "sources": [
     {
+      "id": "xoilac",
+      "name": "Xôi Lạc TV",
+      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_xoilac.png",
+      "api_url": "https://api.cltvlv.com/api/matches",
+      "parser_type": "xoilac",
+      "referer": "https://colatv.live/",
+      "origin": "https://colatv.live"
+    },
+    {
       "id": "tieulam",
       "name": "Hội Quán TV",
       "logo_url": "https://hoiquan6.tv/wp-content/uploads/2025/08/Logo-banner-hoi-quan-tong-hop-khong-nen-1024x305.webp",
@@ -46,15 +55,6 @@
       "parser_type": "tieulam_graph",
       "referer": "https://sv2.thiendinh5.live/",
       "origin": "https://sv2.thiendinh5.live"
-    },
-    {
-      "id": "xoilac",
-      "name": "Xôi Lạc TV",
-      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_xoilac.png",
-      "api_url": "https://api.cltvlv.com/api/matches",
-      "parser_type": "xoilac",
-      "referer": "https://colatv.live/",
-      "origin": "https://colatv.live"
     },
     {
       "id": "luongson",
