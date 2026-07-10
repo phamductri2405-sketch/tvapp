@@ -50,7 +50,7 @@
       "id": "luongson",
       "name": "Lương Sơn TV",
       "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_luongson.png",
-      "api_url": "https://api-ls.cdnokvip.com/api/get-livestream-group?isHot=false&isLive=false&isToday=false&isTomorrow=false&offset=0",
+      "api_url": "https://api-ls.cdnokvip.com/api/get-livestream-group",
       "parser_type": "luongson",
       "referer": "",
       "origin": "",
