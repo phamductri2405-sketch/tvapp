@@ -41,11 +41,11 @@
       "id": "tieulam_graph",
       "name": "Tiếu Lâm TV",
       "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_tieulam.png",
-      "resolver_url": "bit.ly/tieulamtv",
+      "resolver_url": "https://xaycon4.live",
       "api_url": "https://api.tlap17062026.com/matches/graph",
       "parser_type": "tieulam_graph",
-      "referer": "https://sv1.tieulamwc2.net/",
-      "origin": "https://sv1.tieulamwc2.net"
+      "referer": "https://xaycon4.live/",
+      "origin": "https://xaycon4.live"
     },
     {
       "id": "xoilac",
