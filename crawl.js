@@ -33,6 +33,75 @@ function testEndpoint(url) {
     });
 }
 
+function getRedirectTarget(url) {
+    return new Promise((resolve) => {
+        const req = https.get(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            },
+            timeout: 5000
+        }, (res) => {
+            if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+                resolve(res.headers.location);
+            } else {
+                resolve(url);
+            }
+        });
+        req.on('error', () => resolve(url));
+        req.on('timeout', () => {
+            req.destroy();
+            resolve(url);
+        });
+    });
+}
+
+function fetchHtml(url) {
+    return new Promise((resolve) => {
+        const req = https.get(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            },
+            timeout: 5000
+        }, (res) => {
+            if (res.statusCode === 200) {
+                let data = '';
+                res.on('data', (chunk) => data += chunk);
+                res.on('end', () => resolve(data));
+            } else {
+                resolve('');
+            }
+        });
+        req.on('error', () => resolve(''));
+        req.on('timeout', () => {
+            req.destroy();
+            resolve('');
+        });
+    });
+}
+
+async function resolveActiveDomain(resolverUrl) {
+    if (!resolverUrl) return null;
+    try {
+        console.log(`Resolving redirect for: ${resolverUrl}`);
+        const landingPage = await getRedirectTarget(resolverUrl);
+        console.log(`Landing page target: ${landingPage}`);
+        if (!landingPage || landingPage === resolverUrl) return null;
+        
+        const html = await fetchHtml(landingPage);
+        if (!html) return null;
+        
+        // Find href containing sv1. or ticulam or tieulam
+        const match = html.match(/href="https?:\/\/(sv1\.[a-zA-Z0-9.-]+\.[a-zA-Z0-9.]+)"/i);
+        if (match && match[1]) {
+            let host = match[1].split('/')[0];
+            return "https://" + host;
+        }
+    } catch (e) {
+        console.log(`Failed to resolve dynamic domain: ${e.message}`);
+    }
+    return null;
+}
+
 async function run() {
     console.log("Starting Auto-Heal API Link Checker...");
     
@@ -121,7 +190,7 @@ async function run() {
     }
 
     // Update URL fields in the sources list while maintaining the format
-    configData.sources.forEach(src => {
+    for (let src of configData.sources) {
         if (src.id === 'tieulam') {
             src.api_url = workingTieuLam;
         } else if (src.id === 'xoilac') {
@@ -134,7 +203,17 @@ async function run() {
             src.api_url = workingLuongSonList;
             src.luongson_detail_base = workingLuongSonDetailBase;
         }
-    });
+
+        // If source has resolver_url configured, try resolving dynamic domain names
+        if (src.resolver_url) {
+            const resolvedDomain = await resolveActiveDomain(src.resolver_url);
+            if (resolvedDomain) {
+                console.log(`Resolved new active domain for ${src.id}: ${resolvedDomain}`);
+                src.referer = resolvedDomain + "/";
+                src.origin = resolvedDomain;
+            }
+        }
+    }
 
     console.log("Final Generated Config structure:", JSON.stringify(configData, null, 2));
     fs.writeFileSync(configPath, JSON.stringify(configData, null, 2));
