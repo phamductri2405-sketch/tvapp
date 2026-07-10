@@ -19,13 +19,13 @@
   "sources": [
     {
       "id": "tieulam",
-      "name": "Tiếu Lâm TV",
-      "logo_url": "https://cdn.jsdelivr.net/gh/phamductri2405-sketch/tvapp@main/logos/logo_tieulam.png",
-      "resolver_url": "https://bit.ly/tieulamtv",
+      "name": "Hội Quán TV",
+      "logo_url": "https://hoiquan6.tv/wp-content/uploads/2025/08/Logo-banner-hoi-quan-tong-hop-khong-nen-1024x305.webp",
+      "resolver_url": "https://hoiquan6.tv/",
       "api_url": "https://sv.hoiquantv.xyz/api/v1/external/fixtures/unfinished",
       "parser_type": "tieulam",
-      "referer": "https://sv1.tieulamwc2.net/",
-      "origin": "https://sv1.tieulamwc2.net"
+      "referer": "https://hoiquan6.tv/",
+      "origin": "https://hoiquan6.tv"
     },
       {
       "id": "xaycon",
